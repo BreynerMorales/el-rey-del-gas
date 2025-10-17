@@ -1,0 +1,300 @@
+    :root {
+      --azul: #103f79;
+      --amarillo: #f3b229;
+      --gris-claro: #f9f9f9;
+      --gris: #e0e0e0;
+      --blanco: #ffffff;
+      --negro: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--negro);
+      background-color: var(--blanco);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--azul);
+      border-bottom: 1px solid var(--gris);
+      z-index: 1000;
+    }
+.logotipo-elreydelgas{
+  width: 15vh;
+}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+    }
+  /* Sección “hero” / banner grande */
+.hero {
+  margin-top: 70px; /* dejar espacio para la barra fija */
+  /* height: 500px; */
+  /* background: url('https://www.diarioprimiciaoficial.com/wp-content/uploads/2022/10/380e28ba-1bb8-4de2-ac12-39feb1170abe.jpg') no-repeat center center; */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+}
+.background-video {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  /* height: 70%; */
+  /* object-fit: cover; */
+  z-index: 0;
+  pointer-events: none; /* Evita que el video bloquee clics */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Oscurece el video para mejor legibilidad */
+  z-index: 1;
+}
+.hero .contenido {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+.youtube-bg iframe {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 150vw;
+  height: 150vh;
+  z-index: 0;
+  pointer-events: none; /* permite hacer clic en el contenido encima */
+}
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+    .hero p {
+      font-size: 2rem;
+      max-width: 600px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+    .hero .btn {
+      padding: 12px 24px;
+      background-color: #ffcc00;
+      color: #002c5f;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .hero .btn:hover {
+      background-color: #e6b800;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      color: var(--blanco);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--blanco);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--amarillo);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 2px;
+      
+      background: var(--blanco);
+      margin: 4px 0;
+    }
+    #menu{
+        color: var(--blanco);
+    }
+
+@media (max-width: 1000px) {
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: var(--azul);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    max-height: 0;          /* Altura cero para ocultar */
+    opacity: 0;             /* Invisible */
+    overflow: hidden;       /* Ocultar contenido sobrante */
+    transform: translateY(-20px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    visibility: hidden;     /* No interactuable */
+  }
+
+  nav ul.active {
+    max-height: 500px;      /* Ajusta según el tamaño de tu menú */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;    /* Visible e interactuable */
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+    section {
+      padding: 100px 2rem;
+    }
+
+    #inicio {
+      /* background: url('https://images.unsplash.com/photo-1603698055769-bd91ca01b73b?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; */
+      height: 100vh;
+      color: var(--blanco);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    #inicio h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--blanco);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--azul);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--blanco);
+    }
+
+    #sobre, #testimonios, #contacto {
+      background: var(--gris-claro);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      margin-top: 1rem;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      min-width: 250px;
+      background: var(--amarillo);
+      color: var(--azul);
+      padding: 1.5rem;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    .redes-sociales a {
+      margin-right: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--azul);
+      transition: color 0.3s ease;
+    }
+
+    .redes-sociales a:hover {
+      color: var(--amarillo);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+.whatsapp-float {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+    footer {
+      background: var(--azul);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+        color: var(--blanco);
+        
+        text-decoration: none;
+    }
