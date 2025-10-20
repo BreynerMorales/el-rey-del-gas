@@ -1,0 +1,237 @@
+:root {
+    --color-principal: #3498db;
+    --color-secundario: #2ecc71;
+    --fuente-base: 'Poppins', sans-serif;
+    --espaciado: 1.5rem;
+    
+    --azul: #003a98;
+    --amarillo: #ffd703;
+    --gris-claro: #f9f9f9;
+    --gris: #e0e0e0;
+    --blanco: #ffffff;  
+    --negro: #222;
+    --font_main: 'Arial'
+}
+.main-content {
+    /* top: 20vh; */
+    background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.7)),url("../SOURCE/auto_en_taller_phone.jpg");
+   /* background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.5)),url("../SOURCE/auto_en_taller.jpg"); */
+   /* background-image: linear-gradient(to bottom right, rgba(0, 58, 152, 0.8), rgba(0, 0, 0, 0.3)); */
+
+
+    /* background-image: linear-gradient(to bottom, rgb(255 215 3), rgba(0, 0, 0, 0.5)),url("../SOURCE/revision.jpg"); */
+    background-size: cover;
+    
+    height: 100vh;
+    /* margin: auto; */
+    padding-top: 15vh;
+}
+
+ 
+
+.carousel-container {
+    width: 95vw;
+    
+    /* height: 50vh; */
+    margin: auto;
+    overflow: hidden;
+    /* z-index: -10; */
+    bottom: 0;
+    /* background-color: #0056b3; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    justify-content: end;
+    /* position: absolute; */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    cursor: grab;
+    /* padding: 10px; */
+    /* height: 50vh; */
+    /* padding-top: 15vh; */
+}
+/*CARDS CARRUSELL*/
+.carousel-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    /* background: #fff; */
+    /* border-radius: 8px; */
+    /* padding-top: 15vh; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    user-select: none;    
+}
+.left_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left_card > h3{
+    color: var(--amarillo);
+    background-color: var(--azul);
+    padding: 10px;
+    /* border-top: 5px  var(--azul) solid; */
+    border-bottom: 5px  var(--amarillo) solid;
+    /* width: 100%; */
+    border-radius: 10px;
+}
+.left_card > h1 {
+    color: var(--amarillo);
+    font-weight: bold;
+    text-shadow: 7px 2px 5px rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+    /* border: 1px solid black; */
+}
+
+.carousel-card img {
+    width: 80%;
+    /* border-radius: 8px; */
+}
+.carousel-card h3 {
+    margin-top: 10px;
+}
+.carousel-card p {
+    color: #555;
+}
+.carousel-card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: var(--amarillo);
+    color: var(--azul);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.carousel-card button:hover {
+    background-color: var(--azul);
+    color: var(--amarillo);
+}
+.carousel-indicators {
+    text-align: center;
+    /* margin-top: 20px; */
+    
+    height: 35vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px 50px 0px 0px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--azul);
+}
+
+.card_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* position: relative; */
+    /* top: -8vh; */
+    /* display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto auto ;
+    grid-auto-rows: auto;
+    grid-template-rows: repeat(3, 1fr); 3 filas de igual alto */
+    
+}
+/* .cards{
+    border-radius: 50px;
+    box-shadow: -3px  5px 5px 5px rgba(0, 0, 0, 0.1);
+} */
+ .cards{
+    flex:1;
+    margin-bottom: 5px;
+    /* background-color: #2ecc71; */
+ }
+ .cards > h2{
+    font-size: 1.2rem;
+    color: var(--azul);
+    margin: 0;
+    
+ }
+ .cards > h3{
+    font-size: 1rem;
+    color: var(--azul);
+    margin: 0;
+ }
+.cards > img{
+    width: 40px;
+}
+
+
+
+
+
+
+@media (width > 720px) and  (width < 1200px){
+    /*DISTRIBUCION DEL CARRUSELL*/
+    .carousel-card{
+        flex-direction: row;
+    }
+    .carousel-card img {
+        width: 50%;
+    }
+    .main-content {
+        /* background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.5)),url("../SOURCE/auto_en_taller_phone.jpg"); */
+        background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.8)),url("../SOURCE/auto_en_taller.jpg");
+    }
+    .card_top{
+        flex-direction: row;
+        flex:1;
+
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        /* width: fit-content; */
+    }
+
+}
+
+@media (width > 1200px){
+    .main-content {
+        /* background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.5)),url("../SOURCE/auto_en_taller_phone.jpg"); */
+        background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.8)),url("../SOURCE/auto_en_taller.jpg");
+    }
+    /*DISTRIBUCION DEL CARRUSELL*/
+    .carousel-card{
+        flex-direction: row;
+        width: 60vw;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #003a98; */
+        margin: auto;
+    }
+    .carousel-card img {
+        width: 40%;
+        /* background-color: #222; */
+    }
+    .left_card{
+        /* width: 60vw; */
+        align-items: start;
+        /* background-color: #2e8b57; */
+    }
+    .left_card > h1 {
+        font-size: 4rem;
+    }
+    .left_card > h3 {
+        font-size: 2rem;
+    }
+    .left_card > button {
+        font-size: 2rem;
+    }
+}
