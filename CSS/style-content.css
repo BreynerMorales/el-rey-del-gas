@@ -264,6 +264,30 @@
 }
 
 
+.whatsapp-float {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* verde oficial de WhatsApp */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 60px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  text-decoration: none;
+}
 
 /*FOOTER*/
 .foot_logo{
