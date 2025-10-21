@@ -44,17 +44,18 @@
 .btn-llamar{
     padding: 5px;
     border-radius: 30px;
-    background-color: var(--azul);
+    /* background-color: var(--azul); */
+    background: linear-gradient(180deg, var(--azul),var(--azul), #006aff);
     color: var(--amarillo);
     font-weight: bold;
     text-decoration: none;
 }
-.btn-icon > img{
+.icon_rs{
     border-radius: 40px;
     width: 40px; 
     /* padding: 5px; */
     border: 4px solid var(--azul);
-    background-color: var(--azul);
+    background: var(--azul);
 
     /* height: auto;  */
     /* vertical-align: middle;  */
@@ -117,14 +118,14 @@
 .nav_link{
     color: var(--azul);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 
 /*MEDIIA QUERIES PARA OTROS DISPOSITIVOS*/
 
-@media (width > 720px){
+@media (width > 991px){
     /*SIEMPRE SE MUESTRA EL MENU*/
     .nav_container{
         --transform-menu-show: translate(0)
@@ -148,5 +149,13 @@
     }
     .socialmedia{
         display: grid;
+    }
+}
+@media (width < 720px){
+    .socialmedia{
+        display: none;
+    }
+    .nav_link{
+      font-size: 1rem;
     }
 }

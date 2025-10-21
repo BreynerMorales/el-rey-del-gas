@@ -14,7 +14,7 @@
 }
 .main-content {
     /* top: 20vh; */
-    background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.7)),url("../SOURCE/auto_en_taller_phone.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.9)),url("../SOURCE/auto_en_taller_phone.jpg");
    /* background-image: linear-gradient(to bottom, rgba(0, 58, 152, 1), rgba(255, 255, 255, 0.5)),url("../SOURCE/auto_en_taller.jpg"); */
    /* background-image: linear-gradient(to bottom right, rgba(0, 58, 152, 0.8), rgba(0, 0, 0, 0.3)); */
 
@@ -115,11 +115,11 @@
 }
 .carousel-indicators {
     text-align: center;
-    /* margin-top: 20px; */
-    
-    height: 35vh;
+    margin-top: 20px;
+    padding: 20px;
+    /* height: 10vh; */
     background-color: rgb(255, 255, 255);
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px;
 }
 
 .carousel-indicators button {
@@ -149,7 +149,9 @@
     grid-template-rows: auto auto auto ;
     grid-auto-rows: auto;
     grid-template-rows: repeat(3, 1fr); 3 filas de igual alto */
-    
+    /* box-shadow: -3px  5px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 30px; */
+    padding: 10px;
 }
 /* .cards{
     border-radius: 50px;
@@ -159,6 +161,7 @@
     flex:1;
     margin-bottom: 5px;
     /* background-color: #2ecc71; */
+    
  }
  .cards > h2{
     font-size: 1.2rem;
@@ -174,12 +177,233 @@
 .cards > img{
     width: 40px;
 }
+/*BENEFICIOS EL REY DEL GAS*/
+.ben-element > img {
+    width: 80px;
+}
+.beneficios > h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Degradado con tu azul como base */
+    background: linear-gradient(90deg, var(--azul), #025cda, var(--azul));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.beneficios > h1::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: var(--amarillo);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--amarillo), 0 0 20px var(--amarillo);
+}
+
+.beneficios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: auto;
+    padding: 5vh 0vh;
+}
+/* .beneficios > h1 {
+    margin: 5vh;
+} */
+.content-element{
+    display: grid;
+    grid-template-columns: 1fr; /* una columna que ocupa todo el ancho */
+    gap: 1vh; /* espacio vertical igual entre elementos */
+}
+.ben-element {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px; /* espacio entre icono y texto */
+  background: linear-gradient(90deg, var(--azul), rgba(2, 92, 218, 0.85), rgba(0, 58, 152, 0.85));
+  color: var(--blanco);
+  border-radius: 20px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 15px rgba(2, 92, 218, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.ben-element:hover {
+  box-shadow: 0 6px 25px rgba(255, 215, 3, 0.7); /* brillo amarillo al hacer hover */
+}
+
+/* Icono dentro de .ben-element */
+.ben-element .icono {
+  flex-shrink: 0;
+  font-size: 32px;
+  color: var(--amarillo);
+}
+
+/* Texto */
+.ben-element h2 {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.ben-element h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--gris-claro);
+}
 
 
 
+/*FOOTER*/
+.foot_logo{
+    width: 250px;
+}
+  footer {
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
 
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
 
+  .footer-logo-social {
+    flex: 1 1 250px;
+    text-align: center;
+  }
 
+  .footer-logo {
+    /* max-width: 180px; */
+    margin-bottom: 15px;
+  }
+
+  .footer-social-icons {
+    margin: 10px 0 25px;
+  }
+
+  .footer-social-icons a {
+    color: var(--amarillo);
+    margin: 0 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-social-icons a:hover {
+    color: var(--blanco);
+  }
+
+  .footer-phone {
+    display: inline-block;
+    border: 2px solid var(--amarillo);
+    color: var(--amarillo);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .footer-phone:hover {
+    background-color: var(--amarillo);
+    color: var(--azul);
+  }
+
+  .footer-section {
+    /* flex: 1 1 200px; */
+    width: 100%;
+  }
+
+  .footer-section h3 {
+    border-bottom: 2px solid var(--amarillo);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-section ul li a:hover {
+    color: var(--amarillo);
+  }
+
+  /* Iconos pequeños delante del texto (usamos Unicode) */
+  .footer-section ul li a::before {
+    content: '›';
+    color: var(--amarillo);
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
+  /* Enlaces importantes en negrita */
+  .important {
+    font-weight: bold;
+  }
+.btn-llamar-footer{
+    padding: 10px;
+    /* font-weight: bold; */
+    border-radius: 30px;
+    /* background-color: var(--azul); */
+    background: linear-gradient(180deg, var(--amarillo),rgb(216, 159, 4), var(--amarillo));
+    color: var(--azul);
+    font-weight: bold;
+    text-decoration: none;
+}
+.footer-copyright {
+  text-align: center;
+  color: var(--gris-claro);
+  font-size: 0.9rem;
+  justify-content: center;
+  width: 100%;
+  /* margin-top: 30px; */
+}
+
+  /* Ajuste responsivo */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .footer-section {
+      text-align: center;
+    }
+  }
 @media (width > 720px) and  (width < 1200px){
     /*DISTRIBUCION DEL CARRUSELL*/
     .carousel-card{
@@ -199,7 +423,9 @@
         /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
         /* width: fit-content; */
     }
-
+    .content-element{
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    }
 }
 
 @media (width > 1200px){
@@ -233,5 +459,15 @@
     }
     .left_card > button {
         font-size: 2rem;
+    }
+        .card_top{
+        flex-direction: row;
+        flex:1;
+
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        /* width: fit-content; */
+    }
+    .content-element{
+        grid-template-columns: repeat(4, 1fr); /* 3 columnas iguales */
     }
 }
