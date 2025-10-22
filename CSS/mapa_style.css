@@ -1,0 +1,22 @@
+.title_map {
+    font-size: 2.8rem;
+    text-align: center;
+    /* position: relative; */
+    padding-bottom: 20px;
+    /* margin-bottom: 40px; */
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    /* Degradado con tu azul como base */
+    background: linear-gradient(90deg, var(--azul), #025cda, var(--azul));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#map {
+    height: 450px;
+    width: 90%;
+    /* max-width: 900px; */
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
