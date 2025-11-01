@@ -41,3 +41,14 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
+
+.videos_nosotros{
+     display: grid;
+      gap: 20px;
+      /* width: 90%; */
+      /* max-width: 1200px; */
+      height: 90%;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-auto-rows: minmax(auto, auto);
+}
