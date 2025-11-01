@@ -54,7 +54,7 @@
     <main class="main-content-calculator">
         <h1>Calculadora del Ahorro<br><span>el rey del gas</span></h1>
         
-        <label for="kmMes">Kilómetros al mes:</label>
+        <label for="kmMes">Kilómetros:</label>
         <input type="number" id="kmMes" placeholder="Ej: 1000">
 
         <label for="rendGasolina">Rendimiento Gasolina (km/l):</label>
@@ -102,9 +102,9 @@
 
       resultado.style.borderLeftColor = "var(--amarillo)";
       resultado.innerHTML = `
-        <strong>Costo mensual con gasolina:</strong> S/ ${costoGasolina.toFixed(2)}<br>
-        <strong>Costo mensual con GNV:</strong> S/ ${costoGNV.toFixed(2)}<br>
-        <strong>Ahorro mensual estimado:</strong> <span style="color: var(--azul); font-weight: bold;">S/ ${ahorro.toFixed(2)}</span>
+        <strong>Costo con gasolina:</strong> S/ ${costoGasolina.toFixed(2)}<br>
+        <strong>Costo con GNV:</strong> S/ ${costoGNV.toFixed(2)}<br>
+        <strong>Ahorro estimado:</strong> <span style="color: var(--azul); font-weight: bold;">S/ ${ahorro.toFixed(2)}</span>
       `;
     }
   </script>
