@@ -80,11 +80,13 @@
     /* width: 100%; */
     border-radius: 10px;
 }
-.left_card > h1 {
+.tiltle_left_card {
     color: var(--amarillo);
+    font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 7px 2px 5px rgba(0, 0, 0, 0.8);
-    font-size: 1.5rem;
+    align-items: start;
+    margin: 0;
     /* border: 1px solid black; */
 }
 
@@ -181,7 +183,7 @@
 .ben-element > img {
     width: 80px;
 }
-.beneficios > h1 {
+.beneficios_title {
     font-size: 2.8rem;
     text-align: center;
     position: relative;
@@ -195,7 +197,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.beneficios > h1::after {
+.beneficios_title::after {
     content: "";
     position: absolute;
     width: 100px;
@@ -411,7 +413,7 @@
     color: var(--azul);
     font-weight: bold;
     text-decoration: none;
-}
+}       
 .footer-copyright {
   text-align: center;
   color: var(--gris-claro);
@@ -490,9 +492,7 @@
         align-items: start;
         /* background-color: #2e8b57; */
     }
-    .left_card > h1 {
-        font-size: 4rem;
-    }
+
     .left_card > h3 {
         font-size: 2rem;
     }
